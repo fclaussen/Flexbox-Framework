@@ -1,0 +1,31 @@
+@import "compass/css3";
+
+@import "components/global";
+@import "components/flexbox";
+@import "components/grid";
+
+.row {
+    @include box-sizing(border-box);
+    @include display-flex;
+    @include flex(0 1 auto);
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    &.reverse {
+        @include flex-direction(row-reverse);
+    }
+    &.nowrap{
+        @include flex-wrap(nowrap);
+    }
+}
+
+.col {
+    @include flex(1 1 0);
+    max-width: 100%;
+}
+
+.column {
+    @include flex-direction(column);
+    &.reverse {
+        @include flex-direction(column-reverse);
+    }
+}

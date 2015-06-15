@@ -1,0 +1,95 @@
+@function grid-calc($colNumber, $totalColumns) {
+	$result: percentage(($colNumber / $totalColumns));
+	@if $result == 0% { $result: 0; }
+	@return $result;
+}
+
+@mixin grid-html-classes($size){
+	.#{$size} {
+		@include box-sizing(border-box);
+		@include flex(0 0 auto);
+		padding: 0 ($column-gutter/2);
+	}
+
+	@for $i from 1 through $total-columns {
+		.#{$size}-#{$i} {
+			@include box-sizing(border-box);
+			@include flex(0 0 auto);
+			padding: 0 ($column-gutter/2);
+			@include flex-basis(grid-calc($i, $total-columns));
+			width: grid-calc($i, $total-columns);
+		}
+		.#{$size}-order-#{$i}{
+			@include order($i);
+		}
+	}
+
+	@for $i from 0 through $total-columns - 1 {
+		.#{$size}-offset-#{$i} {
+			@include box-sizing(border-box);
+			@include flex(0 0 auto);
+			padding: 0 ($column-gutter/2);
+			margin-#{$default-float}: grid-calc($i, $total-columns);
+		}
+	}
+
+	.#{$size}-start {
+	    @include justify-content(flex-start);
+	}
+
+	.#{$size}-center {
+	    @include justify-content(center);
+	}
+
+	.#{$size}-end{
+	    @include justify-content(flex-end);
+	}
+
+	.#{$size}-around {
+	    @include justify-content(space-around);
+	}
+
+	.#{$size}-between {
+	    @include justify-content(space-between);
+	}
+
+	.#{$size}-top {
+	    @include align-items(flex-start);
+	}
+
+	.#{$size}-middle {
+	    @include align-items(center);
+	}
+
+	.#{$size}-bottom {
+	    @include align-items(flex-end);
+	}
+	.#{$size}-first {
+	    @include order(-1);
+	}
+
+	.#{$size}-last {
+	    @include order(999999);
+	}
+}
+
+@media #{$small-up} {
+	@include grid-html-classes($size:small);
+}
+
+@media #{$medium-up} {
+	@include grid-html-classes($size:medium);
+}
+
+@media #{$large-up} {
+	@include grid-html-classes($size:large);
+}
+
+@if $include-xl-html-grid-classes {
+	@media #{$xlarge-up} {
+		@include grid-html-classes($size:xlarge);
+	}
+	@media #{$xxlarge-up} {
+		@include grid-html-classes($size:xxlarge);
+	}
+}

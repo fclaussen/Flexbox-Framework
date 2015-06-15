@@ -1,0 +1,72 @@
+@mixin display-flex {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+@mixin flex($val) {
+    -webkit-flex: $val;
+    -ms-flex: $val;
+    flex: $val;
+}
+
+@mixin flex-direction($val) {
+    -webkit-flex-direction: $val;
+    -ms-flex-direction: $val;
+    flex-direction: $val;
+}
+
+@mixin flex-wrap($val) {
+    -webkit-flex-wrap: $val;
+    -ms-flex-wrap: $val;
+    flex-wrap: $val;
+}
+
+@mixin flex-grow($val) {
+    -webkit-flex-grow: $val;
+    -ms-flex-positive: $val;
+    flex-grow: $val;
+}
+
+@mixin flex-basis($val) {
+    -webkit-flex-basis: $val;
+    -ms-flex-preferred-size: $val;
+    flex-basis: $val;
+}
+
+@mixin justify-content($val) {
+    @if $val == flex-start{
+        -ms-flex-pack: start;
+    } @else if $val == flex-end {
+        -ms-flex-pack: end;
+    } @else if $val == space-between {
+        -ms-flex-pack: justify;
+    } @else if $val == space-around {
+        -ms-flex-pack: distribute;
+    } @else {
+        -ms-flex-pack: $val;
+    }
+    -webkit-justify-content: $val;
+    -moz-justify-content: $val;
+    justify-content: $val;
+}
+
+@mixin align-items($val) {
+    @if $val == flex-start{
+        -ms-flex-align: start;
+    } @else if $val == flex-end {
+        -ms-flex-align: end;
+    } @else {
+        -ms-flex-align: $val;
+    }
+    -webkit-align-items: $val;
+    -moz-align-items: $val;
+    align-items: $val;
+}
+
+@mixin order($int: 0) {
+    -webkit-order: $int;
+    -moz-order: $int;
+    -ms-flex-order: $int;
+    order: $int;
+}

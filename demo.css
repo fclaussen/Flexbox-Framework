@@ -1,0 +1,27 @@
+.row.display{
+	background: #eee;
+	font-size: 11px;
+	margin-bottom: 10px;
+	line-height: 2rem;
+	border: solid 1px #c6c6c6;
+}
+.row.display div:nth-child(2){
+	background: #e1e1e1;
+}
+
+.row.display-end{
+	background: #fff;
+	font-size: 11px;
+	margin-bottom: 10px;
+	line-height: 2rem;
+	border: solid 1px #c6c6c6;
+}
+
+.row.display-end div{
+	background: #e1e1e1;
+}
+
+.container{
+	max-width: 1000px;
+	margin: 0 auto;
+}
