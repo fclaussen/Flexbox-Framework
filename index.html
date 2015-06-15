@@ -1,63 +1,181 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Flexbox-Framework by fclaussen</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Flexbox-Framework</h1>
-      <h2 class="project-tagline">A simple and effective flexbox based framework.</h2>
-      <a href="https://github.com/fclaussen/Flexbox-Framework" class="btn">View on GitHub</a>
-      <a href="https://github.com/fclaussen/Flexbox-Framework/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/fclaussen/Flexbox-Framework/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+<head>
+	<meta charset="UTF-8">
+	<title>Flexbox-Framework by fclaussen</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/fclaussen/Flexbox-Framework/master/dist/css/flexboxgrid.css">
+	<style>
+		.row.display{
+			background: #eee;
+			font-size: 11px;
+			margin-bottom: 10px;
+			line-height: 2rem;
+			border: solid 1px #c6c6c6;
+		}
+		.row.display div:nth-child(2){
+			background: #e1e1e1;
+		}
 
-    <section class="main-content">
-      <h1>
-<a id="about" class="anchor" href="#about" aria-hidden="true"><span class="octicon octicon-link"></span></a>About</h1>
+		.row.display-end{
+			background: #fff;
+			font-size: 11px;
+			margin-bottom: 10px;
+			line-height: 2rem;
+			border: solid 1px #c6c6c6;
+		}
 
-<p>This project is still very new and for now it is only a grid system. I have plans on making it better and better and I'm counting on the community to collaborate with this and make this awesome! If you are interested in <a href="#collaborating">collaborating</a>, check the instructions below.</p>
+		.row.display-end div{
+			background: #e1e1e1;
+		}
 
-<p>I based some of what was done on Zurb Foundation 5 mixins. Thanks again for a wonderful job guys.</p>
+		.container{
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<section class="page-header">
+		<h1 class="project-name">Flexbox-Framework</h1>
+		<h2 class="project-tagline">A simple and effective flexbox based framework.</h2>
+		<a href="#demo" class="btn">Demo</a>
+		<a href="https://github.com/fclaussen/Flexbox-Framework" class="btn">View on GitHub</a>
+		<a href="https://github.com/fclaussen/Flexbox-Framework/zipball/master" class="btn">Download .zip</a>
+		<a href="https://github.com/fclaussen/Flexbox-Framework/tarball/master" class="btn">Download .tar.gz</a>
+	</section>
 
-<h1>
-<a id="how-to-install" class="anchor" href="#how-to-install" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to install?</h1>
+	<section class="main-content">
+		<h1><a id="about" class="anchor" href="#about" aria-hidden="true"><span class="octicon octicon-link"></span></a>About</h1>
+		<p>This project is still very new and for now it is only a grid system. I have plans on making it better and better and I'm counting on the community to collaborate with this and make this awesome! If you are interested in <a href="#collaborating">collaborating</a>, check the instructions below.</p>
 
-<p>You can either download the entire repository or clone the repository and use the SASS files to customize it to your needs or you can download the CSS version and include it to your project.</p>
+		<p>I based some of what was done on Zurb Foundation 5 mixins. Thanks again for a wonderful job guys.</p>
 
-<pre><code>$ cd your_folder
-$ git clone https://github.com/fclaussen/Flexbox-Framework.git
-</code></pre>
+		<h1><a id="how-to-install" class="anchor" href="#how-to-install" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to install?</h1>
 
-<h1>
-<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>DEMO</h1>
+		<p>You can either download the entire repository or clone the repository and use the SASS files to customize it to your needs or you can download the CSS version and include it to your project.</p>
 
-<h1>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h1>
+		<pre><code>$ cd your_folder<br>$ git clone https://github.com/fclaussen/Flexbox-Framework.git</code></pre>
 
-<h1>
-<a id="collaborating" class="anchor" href="#collaborating" aria-hidden="true"><span class="octicon octicon-link"></span></a>Collaborating</h1>
+		<h1><a id="demo" class="anchor" href="#demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>DEMO</h1>
 
-<h1>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h1>
+		<section class="demo-content">
+			<h2>Basic</h2>
+			<div class="row display">
+				<div class="small-2 large-4">small-2 large-4</div>
+				<div class="small-4 large-4">small-4 large-4</div>
+				<div class="small-6 large-4">small-6 large-4</div>
+			</div>
+			<div class="row display">
+				<div class="small-12 large-3">large-3</div>
+				<div class="small-12 large-6">large-6</div>
+				<div class="small-12 large-3">large-3</div>
+			</div>
+			<div class="row display">
+				<div class="small-6 large-2">small-6 large-2</div>
+				<div class="small-6 large-8">small-6 large-8</div>
+				<div class="small-12 large-2">small-12 large-2</div>
+			</div>
+			<div class="row display">
+				<div class="small-3">small-3</div>
+				<div class="small-9">small-9</div>
+			</div>
+			<div class="row display">
+				<div class="small-12 large-4">large-4</div>
+				<div class="small-12 large-8">large-8</div>
+			</div>
+			<div class="row display">
+				<div class="small-6 large-5">small-6 large-5</div>
+				<div class="small-6 large-7">small-6 large-7</div>
+			</div>
+			<div class="row display">
+				<div class="small-12 large-6">large-6</div>
+				<div class="small-12 large-6">large-6</div>
+			</div>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="https://help.github.com/pages">https://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+			<h2>Small Grids</h2>
+			<div class="row display">
+				<div class="small-2">2 columns</div>
+				<div class="small-10">10 columns</div>
+			</div>
+			<div class="row display">
+				<div class="small-3">3 columns</div>
+				<div class="small-9">9 columns</div>
+			</div>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/fclaussen/Flexbox-Framework">Flexbox-Framework</a> is maintained by <a href="https://github.com/fclaussen">fclaussen</a>.</span>
+			<h2>Medium Grids</h2>
+			<div class="row display">
+				<div class="small-12 medium-2">2 columns</div>
+				<div class="small-12 medium-10">10 columns</div>
+			</div>
+			<div class="row display">
+				<div class="small-12 medium-3">3 columns</div>
+				<div class="small-12 medium-9">9 columns</div>
+			</div>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
+			<h2>Offsets</h2>
+			<div class="row display">
+				<div class="small-12 medium-1">1</div>
+				<div class="small-12 medium-11">11</div>
+			</div>
+			<div class="row display">
+				<div class="small-12 medium-1">1</div>
+				<div class="small-12 medium-10 medium-offset-1">10, offset 1</div>
+			</div>
+			<div class="row display">
+				<div class="small-12 medium-1">1</div>
+				<div class="small-12 medium-9 medium-offset-2">9, offset 2</div>
+			</div>
+			<div class="row display">
+				<div class="small-12 medium-1">1</div>
+				<div class="small-12 medium-8 medium-offset-3">8, offset 3</div>
+			</div>
 
-    </section>
+			<h2>Incomplete Rows</h2>
+			<div class="row display-end">
+				<div class="small-3">3</div>
+				<div class="small-3">3</div>
+				<div class="small-3 small-offset-3">3</div>
+			</div>
+			<div class="row display-end">
+				<div class="small-3">3</div>
+				<div class="small-3">3</div>
+				<div class="small-3">3</div>
+			</div>
 
-  
-  </body>
+			<h2>Reordering</h2>
+			<div class="row display-end">
+				<div class="small-2 small-order-5">1</div>
+				<div class="small-2 small-last medium-first">2</div>
+				<div class="small-2 small-order-3">3</div>
+				<div class="small-2 small-first medium-last">4</div>
+				<div class="small-2 small-order-4">5</div>
+				<div class="small-2 small-order-2">6</div>
+			</div>
+		</section>
+
+		<h1><a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h1>
+		<a href="//github.com/fclaussen" title="Fclaussen"><img src="https://avatars0.githubusercontent.com/u/1021860?v=3&s=70" alt="Fclaussen"></a>
+
+		<h1><a id="collaborating" class="anchor" href="#collaborating" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to collaborate</h1>
+		<p>The project file template is pretty straight forward. The root folder holds an example html page and inside the dist folder you can find the scss files to be compiled.</p>
+		<p>If you find any bugs, you can open an issue at <a href="https://github.com/fclaussen/Flexbox-Framework/issues">https://github.com/fclaussen/Flexbox-Framework/issues</a>. If you find a bug and know how to fix it, fork the project, create a new branch, fix the problem and submit a pull request.</p>
+		<p>In your pull request, please explain the problem and your approach to fixing it. If you could provide a working example of that bug with a jsfiddle or codepen it would be great.</p>
+
+		<h1><a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h1>
+
+		<p>Having trouble with this framework? Check out the documentation at <a href="https://github.com/fclaussen/Flexbox-Framework/wiki">https://github.com/fclaussen/Flexbox-Framework/wiki</a> or create and issue at <a href="https://github.com/fclaussen/Flexbox-Framework/issues">https://github.com/fclaussen/Flexbox-Framework/issues</a> and me or someone else will help you sort it out.</p>
+
+		<footer class="site-footer">
+			<span class="site-footer-owner"><a href="https://github.com/fclaussen/Flexbox-Framework">Flexbox-Framework</a> is maintained by <a href="https://github.com/fclaussen">fclaussen</a>.</span>
+
+			<span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+		</footer>
+
+	</section>
+</body>
 </html>
-
