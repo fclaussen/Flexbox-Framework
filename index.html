@@ -65,6 +65,11 @@
 
 		<section class="demo-content">
 			<h2><a id="basic" class="anchor" href="#basic" aria-hidden="true"><span class="octicon octicon-link"></span></a>Basic</h2>
+
+			<p>Start by adding an element of class row. This is your block to contain elements. Add elements with specific classes to define screen size and amount of columns to use. Like this: <strong>small-#, medium-#, large-#, xlarge-#, xxlarge-#</strong>. Replace # for the number of columns you would like to use.</p>
+
+			<p><strong>Flexbox Framework is mobile first.</strong> Code for small screens first and larger devices will inherit those styles. Customize as necessary.</p>
+
 			<div class="row display">
 				<div class="small-2 large-4">small-2 large-4</div>
 				<div class="small-4 large-4">small-4 large-4</div>
@@ -98,6 +103,9 @@
 			</div>
 
 			<h2><a id="small-grids" class="anchor" href="#small-grids" aria-hidden="true"><span class="octicon octicon-link"></span></a>Small Grids</h2>
+
+			<p>Small grids expand to large screens easier than large grids cram into small screens.</p>
+
 			<div class="row display">
 				<div class="small-2">2 columns</div>
 				<div class="small-10">10 columns</div>
@@ -108,6 +116,9 @@
 			</div>
 
 			<h2><a id="medium-grids" class="anchor" href="#medium-grids" aria-hidden="true"><span class="octicon octicon-link"></span></a>Medium Grids</h2>
+
+			<p>Medium sized screens will inherit styles from small, unless you specify a different layout, using the medium grid classes.</p>
+
 			<div class="row display">
 				<div class="small-12 medium-2">2 columns</div>
 				<div class="small-12 medium-10">10 columns</div>
@@ -118,6 +129,9 @@
 			</div>
 
 			<h2><a id="offsets" class="anchor" href="#offsets" aria-hidden="true"><span class="octicon octicon-link"></span></a>Offsets</h2>
+
+			<p>Move blocks up to 11 columns to the right by using classes like <strong>.large-offset-1</strong> and <strong>.small-offset-3</strong>.</p>
+
 			<div class="row display">
 				<div class="small-12 medium-1">1</div>
 				<div class="small-12 medium-11">11</div>
@@ -136,6 +150,9 @@
 			</div>
 
 			<h2><a id="incomplete-rows" class="anchor" href="#incomplete-rows" aria-hidden="true"><span class="octicon octicon-link"></span></a>Incomplete Rows</h2>
+
+			<p>Flexbox framework will <strong>NOT</strong> float the last element to the right. If you want the last element to be aligned to the right you should offset the necessary amount to achieve that.</p>
+
 			<div class="row display-end">
 				<div class="small-3">3</div>
 				<div class="small-3">3</div>
@@ -148,6 +165,11 @@
 			</div>
 
 			<h2><a id="reordering" class="anchor" href="#reordering" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reordering</h2>
+
+			<p>Flexbox allows us to define the order of our elements regardless of the order they appear on your code. Use the order classes to manipulate your elements.</p>
+
+			<p><strong>NOTICE:</strong> You cannot set only one element to a number. If you order one element you need to order all elements inside that row. If you fail to do so, the ordered element will take the last or the first positions depending on the value you choose.</p>
+
 			<div class="row display-end">
 				<div class="small-2 small-order-5">1</div>
 				<div class="small-2 small-last medium-first">2</div>
