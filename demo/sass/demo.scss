@@ -1,0 +1,98 @@
+@import "compass/css3";
+@import "../../dist/scss/components/global";
+@import "../../dist/scss/components/flexbox";
+
+.row{
+    &.display{
+        div{
+            background: #eee;
+            font-size: 11px;
+            margin-bottom: 10px;
+            line-height: 2rem;
+            border: solid 1px #c6c6c6;
+            &:nth-child(2){
+                background: #e1e1e1;
+            }
+        }
+    }
+    &.display-end{
+        div{
+            font-size: 11px;
+            margin-bottom: 10px;
+            line-height: 2rem;
+            border: solid 1px #c6c6c6;
+            background: #e1e1e1;
+        }
+    }
+}
+
+.left-offcanvas-toggle{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -999em;
+    position: relative;
+    display: block;
+    z-index: 1;
+    box-sizing: content-box;
+    margin: 15px 0 0;
+    @media #{$medium-up}{
+        display: none;
+    }
+    .line{
+        border: 1px solid #fff;
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        @include transition(all .3s ease-in);
+        &:nth-of-type(2){
+            top: 8px;
+        }
+    }
+    &.open{
+        .line{
+            &:nth-of-type(1){
+                @include transform(rotate(45deg));
+                top: 2px;
+            }
+            &:nth-of-type(2){
+                @include transform(rotate(-45deg));
+                top: 3px;
+            }
+        }
+    }
+}
+#left-offcanvas-menu{
+    nav{
+        margin-top: 45px;
+    }
+}
+
+.upper-menu{
+    background: #5f6062;
+    position: relative;
+    p{
+        color: #fff;
+        display: none;
+        margin: 0;
+        @media #{$medium-up}{
+            display: block;
+        }
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        @include display-flex;
+        li{
+            margin: 0 0 0 20px;
+            a{
+                color: #fff;
+                font-size: 30px;
+            }
+        }
+    }
+}
