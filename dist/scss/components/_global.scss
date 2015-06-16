@@ -80,6 +80,15 @@ $retina: (
   "#{$screen} and (min-resolution: 2dppx)"
 );
 
+/**
+ * OFFCANVAS
+ */
+$offcanvas-width: 15rem !default;
+$offcanvas-small-full-width: true !default;
+$offcanvas-background-color: #333333 !default;
+$offcanvas-toggle-animation-time: .3s !default;
+$offcanvas-toggle-animation-timing-function: ease-in !default;
+
 @if $include-html-classes {
 	*,
     *:before,
