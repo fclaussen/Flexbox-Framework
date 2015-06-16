@@ -64,6 +64,19 @@
     align-items: $val;
 }
 
+@mixin align-self($val) {
+    -webkit-align-self: $val;
+    -moz-align-self: $val;
+    @if $val == flex-start {
+        -ms-flex-item-align: start;
+    } @else if $val == flex-end {
+        -ms-flex-item-align: end;
+    } @else {
+        -ms-flex-item-align: $val;
+    }
+    align-self: $val;
+}
+
 @mixin order($int: 0) {
     -webkit-order: $int;
     -moz-order: $int;
