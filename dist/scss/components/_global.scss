@@ -81,8 +81,6 @@ $retina: (
 );
 
 @if $include-html-classes {
-	html, body { height: 100%; }
-
 	*,
     *:before,
     *:after {
