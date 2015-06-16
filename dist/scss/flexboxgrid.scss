@@ -3,6 +3,7 @@
 @import "components/global";
 @import "components/flexbox";
 @import "components/grid";
+@import "components/offcanvas";
 
 .row {
     @include box-sizing(border-box);
@@ -10,6 +11,9 @@
     @include flex(0 1 auto);
     @include flex-direction(row);
     @include flex-wrap(wrap);
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
     &.reverse {
         @include flex-direction(row-reverse);
     }
