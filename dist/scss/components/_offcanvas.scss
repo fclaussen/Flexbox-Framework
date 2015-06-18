@@ -1,12 +1,39 @@
-#left-offcanvas-menu {
+#left-offcanvas, #right-offcanvas {
+    left: -100%;
+    position: absolute;
+    top: -100%;
+    -webkit-appearance: none;
+}
+#left-offcanvas:checked ~ #left-offcanvas-menu{
+    transform: translate3d($offcanvas-width,0,0);
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.7);
+    @if $offcanvas-small-full-width {
+        @media #{$small-only} {
+            transform: translate3d(100%,0,0);
+        }        
+    }
+}
+#right-offcanvas:checked ~ #right-offcanvas-menu{
+    transform: translate3d(-$offcanvas-width,0,0);
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.7);
+    @if $offcanvas-small-full-width {
+        @media #{$small-only} {
+            transform: translate3d(-100%,0,0);
+        }        
+    }
+}
+
+
+%offcanvas-menu{
     -webkit-backface-visibility: hidden;
-    width: $offcanvas-width;
     height: 100%;
     position: absolute;     
     top: 0;
     background: $offcanvas-background-color;
-    transition: left $offcanvas-toggle-animation-time $offcanvas-toggle-animation-timing-function;
-    left: (-$offcanvas-width);
+    transition: transform $offcanvas-toggle-animation-time $offcanvas-toggle-animation-timing-function,
+                box-shadow $offcanvas-toggle-animation-time $offcanvas-toggle-animation-timing-function;
+    width: $offcanvas-width;
+    z-index: 99999;    
     * { -webkit-backface-visibility: hidden; }
     nav{
         ul{
@@ -40,13 +67,56 @@
             }
         }
     }
+}
+#left-offcanvas-menu {
+    @extend %offcanvas-menu;
+    left: (-$offcanvas-width);
     @if $offcanvas-small-full-width {
         @media #{$small-only} {
-            left: -100%;
             width: 100%;
+            left: -100%;
         }        
     }
-    &.open{
-        left:0;
+}
+#right-offcanvas-menu {
+    @extend %offcanvas-menu;
+    right: (-$offcanvas-width);
+    @if $offcanvas-small-full-width {
+        @media #{$small-only} {
+            width: 100%;
+            right: -100%;
+        }        
     }
+}
+.offcanvas-overlay{
+    position: fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index: 1;
+    visibility: hidden;
+    background: rgba(0,0,0,0);
+    transition: background $offcanvas-toggle-animation-time $offcanvas-toggle-animation-timing-function,
+                visibility $offcanvas-toggle-animation-time $offcanvas-toggle-animation-timing-function;
+    z-index: 1;
+    label{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        display: none;
+    }
+}
+#left-offcanvas:checked ~ .offcanvas-overlay, #right-offcanvas:checked ~ .offcanvas-overlay{
+    visibility: visible;
+    background: rgba(0,0,0,0.5);
+    z-index: 9999;
+}
+
+#left-offcanvas:checked ~ .offcanvas-overlay > label[for="left-offcanvas"],
+#right-offcanvas:checked ~ .offcanvas-overlay > label[for="right-offcanvas"] {
+    display: block;
 }
