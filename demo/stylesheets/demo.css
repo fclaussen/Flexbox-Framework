@@ -26,7 +26,8 @@ body {
   line-height: 1.5;
   margin: 0;
   padding: 0;
-  position: relative; }
+  position: relative;
+  overflow-x: hidden; }
 
 a:hover {
   cursor: pointer; }
@@ -72,7 +73,7 @@ select {
   border: solid 1px #c6c6c6;
   background: #e1e1e1; }
 
-.left-offcanvas-toggle {
+.offcanvas-toggle {
   cursor: pointer;
   width: 30px;
   height: 30px;
@@ -81,13 +82,9 @@ select {
   text-indent: -999em;
   position: relative;
   display: block;
-  z-index: 1;
   box-sizing: content-box;
   margin: 15px 0 0; }
-  @media only screen and (min-width: 40.0625em) {
-    .left-offcanvas-toggle {
-      display: none; } }
-  .left-offcanvas-toggle .line {
+  .offcanvas-toggle .line {
     border: 1px solid #fff;
     display: block;
     position: absolute;
@@ -97,23 +94,20 @@ select {
     -o-transition: all 0.3s ease-in;
     -webkit-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in; }
-    .left-offcanvas-toggle .line:nth-of-type(2) {
+    .offcanvas-toggle .line:nth-of-type(2) {
       top: 8px; }
-  .left-offcanvas-toggle.open .line:nth-of-type(1) {
+  .offcanvas-toggle.open .line:nth-of-type(1) {
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     top: 2px; }
-  .left-offcanvas-toggle.open .line:nth-of-type(2) {
+  .offcanvas-toggle.open .line:nth-of-type(2) {
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     top: 3px; }
-
-#left-offcanvas-menu nav {
-  margin-top: 45px; }
 
 .upper-menu {
   background: #5f6062;

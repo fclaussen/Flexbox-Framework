@@ -7,32 +7,25 @@
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="../dist/css/flexboxgrid.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/demo.css">
-
-	<script src="js/app.js" type="text/javascript"></script>
 </head>
 <body>
 	<header id="header">
 		<div class="upper-menu">
-			<div class="row small-middle">
-				<div class="small-6">
-					<a href="#" class="left-offcanvas-toggle">
+			<div class="row small-middle small-between small">
+					<label for="left-offcanvas" class="offcanvas-toggle">
 						<span class="line"></span>
 						<span class="line"></span>
-					</a>
-					<p>Resize your browser until the menu icon shows up.</p>
-				</div>
-				<div class="small-6">
-					<ul class="social-media small-end">
-						<li><a href="#" title=""><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#" title=""><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#" title=""><i class="fa fa-instagram"></i></a></li>
-					</ul>
-				</div>
+					</label>
+					<label for="right-offcanvas" class="offcanvas-toggle small-end">
+						<span class="line"></span>
+						<span class="line"></span>
+					</label>
 			</div>
 		</div>
 	</header>
 	
-	<!-- Off Canvas Menu -->
+	<!-- Left Off Canvas Menu -->
+	<input type="checkbox" id="left-offcanvas">
     <aside id="left-offcanvas-menu">
         <!-- whatever you want goes here -->
         <nav>
@@ -45,6 +38,26 @@
         	</ul>
         </nav>
     </aside>
+
+    <!-- Right Off Canvas Menu -->
+	<input type="checkbox" id="right-offcanvas">
+    <aside id="right-offcanvas-menu">
+        <!-- whatever you want goes here -->
+        <nav>
+        	<ul>
+        		<li><label>Right Offcanvas Label</label></li>
+        		<li><a href="#">Right Item 1</a></li>
+				<li><a href="#">Right Item 2</a></li>
+				<li><a href="#">Right Item 3</a></li>
+				<li><a href="#">Right Item 4</a></li>
+        	</ul>
+        </nav>
+    </aside>
+	
+	<div class="offcanvas-overlay">
+		<label for="left-offcanvas"></label>
+		<label for="right-offcanvas"></label>
+	</div>
 
 	<div class="row small">
 		<h1>Grid System</h1>		
