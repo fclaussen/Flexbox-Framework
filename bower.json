@@ -1,0 +1,32 @@
+{
+  "name": "Flexbox-Framework",
+  "version": "0.1.2",
+  "homepage": "https://github.com/fclaussen/Flexbox-Framework",
+  "authors": [
+    "Fernando Claussen <fernandoclaussen@gmail.com>"
+  ],
+  "description": "A flexbox based front-end responsive framework",
+  "main": [
+  	"dist/scss/flexboxgrid.scss",
+  ]
+  "keywords": [
+    "flexbox",
+    "framework",
+    "responsive",
+    "design",
+    "rwd",
+    "foundation",
+    "bootstrap",
+    "offcanvas",
+    "grid",
+    "flex"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
