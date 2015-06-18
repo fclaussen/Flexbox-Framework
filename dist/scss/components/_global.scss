@@ -39,6 +39,8 @@ $total-columns: 12 !default;
 	&:after { clear: both; }
 }
 
+$row-max-width: auto !default;
+
 $column-gutter: rem-calc(30) !default;
 $small-breakpoint:  em-calc(640)  !default;
 $medium-breakpoint: em-calc(1024) !default;
@@ -84,7 +86,7 @@ $retina: (
  * OFFCANVAS
  */
 $offcanvas-width: 15rem !default;
-$offcanvas-small-full-width: true !default;
+$offcanvas-small-full-width: false !default;
 $offcanvas-background-color: #333333 !default;
 $offcanvas-toggle-animation-time: .3s !default;
 $offcanvas-toggle-animation-timing-function: ease-in !default;
@@ -108,6 +110,7 @@ $offcanvas-toggle-animation-timing-function: ease-in !default;
 		margin: 0;
 		padding: 0;
 		position: relative;
+    overflow-x: hidden;
     }
 
     a:hover{ cursor: pointer; }
