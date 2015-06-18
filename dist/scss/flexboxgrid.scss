@@ -11,7 +11,7 @@
     @include flex(0 1 auto);
     @include flex-direction(row);
     @include flex-wrap(wrap);
-    max-width: 1000px;
+    max-width: $row-max-width;
     width: 100%;
     margin: 0 auto;
     &.reverse {
